@@ -13,4 +13,5 @@ AnimaisSchema.virtual("url").get(function () {
 });
 
 //Forçando que o nome da coleção seja utilizado em português (ao invés de inglês no plural)
-module.exports = mongoose.model("animais", AnimaisSchema);
+module.exports = mongoose.model("animais", AnimaisSchema, "animais");
+

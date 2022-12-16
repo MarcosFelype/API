@@ -1,10 +1,8 @@
 const dotenv = require('dotenv');
 dotenv.config();
 const mongoose = require('mongoose');
-//const urlMongo = `mongodb+srv://${process.env.USER_MONGO}:${process.env.PASSWORD_MONGO}@cluster0.jqvpq.mongodb.net/pweb?retryWrites=true&w=majority`;
-//mongodb+srv://admin:<password>@cluster0.bp0h9jk.mongodb.net/{se não especificar, ele cria o banco test}?retryWrites=true&w=majority
-const urlMongo = `mongodb+srv://admin:a1b2c3d4@cluster0.jqvpq.mongodb.net/?retryWrites=true&w=majority`;
-console.log(urlMongo);
+const urlMongo = `mongodb+srv://${process.env.USER_MONGO}:${process.env.PASSWORD_MONGO}@cluster0.jqvpq.mongodb.net/pweb?retryWrites=true&w=majority`;
+console.log(urlMongo)
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
