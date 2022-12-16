@@ -23,9 +23,16 @@ exports.create = (req, res) => {
 exports.update = async (req, res) => {
     const filter = { _id: new ObjectId(req.body.id) };
     console.log(filter);
-    const update = { 
-        //Dados a serem atualizados (ex: nome, cidade...) 
-        //padrão:  req.body.nome_atributo
+    //Dados a serem atualizados (ex: nome, cidade...) 
+    //padrão:  req.body.nome_atributo
+    const update = {
+        nome: req.body.nome,
+        email: req.body.email,
+        password: req.body.password,
+        age: req.body.age,
+        country: req.body.country,
+        office: req.body.office,
+        preferenceArea: req.body.preferenceArea
     };
     console.log(update);
     await User

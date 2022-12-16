@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const opts = { toJSON: { virtuals: true } };
 const AnimaisSchema = new Schema({
         nome: { type: String, required: true }
-    },
+    },    
     opts
 );
 
