@@ -1,7 +1,6 @@
 const dotenv = require('dotenv');
 dotenv.config();
 const mongoose = require('mongoose');
-//const urlMongo = `mongodb+srv://${process.env.USER_MONGO}:${process.env.PASSWORD_MONGO}@cluster0.jqvpq.mongodb.net/pweb?retryWrites=true&w=majority`;
 const urlMongo = `mongodb+srv://${process.env.USER_MONGO}:${process.env.PASSWORD_MONGO}@cluster0.bp0h9jk.mongodb.net/api_pweb?retryWrites=true&w=majority`;
 console.log(urlMongo)
 var createError = require('http-errors');

@@ -1,6 +1,7 @@
 const Questoes = require('./models/questoes');
 
-const questoes = new Questoes(
+var questoes = new Questoes({});
+var questoes = 
     [
 
         {
@@ -41,12 +42,13 @@ const questoes = new Questoes(
             assunto:'Tópicos de astronáutica',
             nivel:2
         }
-    ]
-);
+    ];
+
 
 function getQuestions(){
     return questoes;
 }
+
 
 module.exports = getQuestions;
 

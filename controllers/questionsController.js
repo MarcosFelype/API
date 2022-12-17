@@ -1,31 +1,43 @@
 //const ObjectId = require('mongoose').Types.ObjectId;
-//const Questoes = require('../models/questoes');
-const listaQuestoes = require('../bancoQuestoes');
+const Questoes = require('../models/questoes');
+const listaQuestoes = require('../bancoQuestoes')();
+const express = require('express');
+const router = express.Router();
+const app = express();
 
-function insertQuestions(req, res){
-    for (var i=0; i<listaQuestoes.length; i++){
 
-        const questionsDocument = listaQuestoes[i];
 
-        questionsDocument
-        .save()
-        .then((result => {
-            res.status(201).json({
-                msg: 'Questão cadastrada com sucesso!'
-            });
-        }))
-        .catch(err => {
-            res.status(500).json({
-                error: err
-            });
-        })
-    }
-}
+        //const questionsDocument = new Questoes({});
+    /*function insertQuestions(){
+        router.post("/create", (req, res) =>{
+            for (var i=0; i<listaQuestoes.length; i++){
+                listaQuestoes[i]
+                .save()
+                .then((result => {
+                    res.status(201).json({
+                        msg: 'Questão cadastrada com sucesso!'
+                    });
+                }))
+                .catch(err => {
+                    res.status(500).json({
+                        error: err
+                    });
+                })
+            }
+        });
+            
+
+    }*/
+    
+
 
 exports.list = async (req, res) => {
-    await listaQuestoes.find({}).exec(function(err, docs) {
-        if (!docs){
-            insertQuestions(req, res);
+    await Questoes.find({}).exec(function(err, docs) {
+        //console.log(docs.length);
+        if (docs.length==0){
+            console.log("Entrou aqui");
+            //res.send("Enviando questões");
+            insertQuestions();
         }
         else{
             res.status(200).json(docs);
