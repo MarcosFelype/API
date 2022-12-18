@@ -7,6 +7,10 @@ exports.list = async (req, res) => {
     });
 }
 
+exports.showUser = async (req,res) => {
+    //Falta implementar
+}
+
 exports.create = (req, res) => {
     const userDocument = new User({
     });
