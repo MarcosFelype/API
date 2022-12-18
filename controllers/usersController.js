@@ -8,7 +8,12 @@ exports.list = async (req, res) => {
 }
 
 exports.showUser = async (req,res) => {
-    //Falta implementar
+    //Ver se dá certo
+    const id = { _id: new ObjectId(req.body.id) };
+    await User.findById(id)
+    .exec(function(err, docs){
+        res.status(200).json(docs);
+    });
 }
 
 exports.create = (req, res) => {
