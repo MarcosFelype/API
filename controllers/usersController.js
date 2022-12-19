@@ -29,8 +29,8 @@ exports.showUser = async (req,res) => {
         });
 }*/
 
-exports.create = (req, res) => {
-    const createdUser = User.create(req.body);
+async create = (req, res) => {
+    const createdUser = await User.create(req.body);
     
     return res.status(200).json(createdUser);
 }
