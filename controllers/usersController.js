@@ -49,13 +49,13 @@ exports.update = async (req, res) => {
     //Dados a serem atualizados (ex: nome, cidade...) 
     //padrão:  req.body.nome_atributo
     const update = {
-        nome: req.body.nome,
-        email: req.body.email,
-        password: req.body.password,
-        age: req.body.age,
-        country: req.body.country,
-        office: req.body.office,
-        preferenceArea: req.body.preferenceArea
+        nome: req.params.nome,
+        email: req.params.email,
+        password: req.params.password,
+        age: req.params.age,
+        country: req.params.country,
+        office: req.params.office,
+        preferenceArea: req.params.preferenceArea
     };
     console.log(update);
     await User
