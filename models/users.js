@@ -15,7 +15,7 @@ const UserSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true,
-        select: false,
+        //select: false,
     },
     age: {
         type: String,
@@ -43,12 +43,12 @@ UserSchema.virtual("url").get(function () {
     return `/user/${this._id}`;
 });
 
-UserSchema.pre('save', async function(next){
+/*UserSchema.pre('save', async function(next){
     const hash = await bcrypt.hash(this.password, 10);
     this.password = hash;
 
     next();
-})
+})*/
 
 const User = mongoose.model('user', UserSchema, 'user');
 
