@@ -16,7 +16,7 @@ exports.showUser = async (req,res) => {
     });
 }
 
-exports.create = (req, res) => {
+/*exports.create = (req, res) => {
     const userDocument = new User({
     });
     userDocument
@@ -27,6 +27,12 @@ exports.create = (req, res) => {
         .catch(err => {
             res.status(500).json({ error: err });
         });
+}*/
+
+exports.create = (req, res) => {
+    const createdUser = User.create(req.body);
+    
+    return res.status(200).json(createdUser);
 }
 
 exports.update = async (req, res) => {
