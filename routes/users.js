@@ -14,7 +14,7 @@ router.get("/", usersController.list);
 
 router.post('/', usersController.create);
 router.get('/:usersId', usersController.showUser);
-router.put('/update/:usersId', usersController.update);
-router.delete('/delete/:usersId', usersController.delete);
+router.put('/:usersId', usersController.update);
+router.delete('/:usersId', usersController.delete);
 
 module.exports = router;
