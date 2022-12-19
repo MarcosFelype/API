@@ -9,9 +9,9 @@ exports.list = async (req, res) => {
 
 exports.showUser = async (req,res) => {
     //Ver se dá certo
-    const id = { _id: new ObjectId(req.body.id) };
-    await User.findById(id)
-    .exec(function(err, docs){
+    const id = { _id: new ObjectId(req.params.usersId) };
+    console.log(req.params.usersId);
+    await User.findById(id._id).exec(function(err, docs){
         res.status(200).json(docs);
     });
 }
