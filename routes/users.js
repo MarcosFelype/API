@@ -8,8 +8,8 @@ router.get("/:usersId", usersController.showUser); //mostra os dados de apenas u
 
 router.post("/create/", usersController.create);
 
-router.post("/:usersId/update/", usersController.update);
+router.post("/update/:usersId", usersController.update);
 
-router.post("/:usersId/delete/", usersController.delete);
+router.post("/delete/:usersId", usersController.delete);
 
 module.exports = router;
