@@ -24,8 +24,9 @@ exports.create = (req, res) => {
         age: req.body.age,
         country: req.body.country,
         office: req.body.office,
-        preferenceArea: req.body.preferenceArea,
+        preferenceArea: req.body.preferenceArea
     });
+    userDocument
     userDocument
         .save()
         .then(result => {
