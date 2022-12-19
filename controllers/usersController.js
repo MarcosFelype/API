@@ -18,6 +18,13 @@ exports.showUser = async (req,res) => {
 
 exports.create = (req, res) => {
     const userDocument = new User({
+        name: req.body.name,
+        email: req.body.email,
+        password: req.body.password,
+        age: req.body.age,
+        country: req.body.country,
+        office: req.body.office,
+        preferenceArea: req.body.preferenceArea,
     });
     userDocument
         .save()
@@ -71,3 +78,4 @@ exports.delete = async (req, res) => {
         exports.list(req, res);
     });
 }
+
