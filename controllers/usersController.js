@@ -16,7 +16,7 @@ exports.showUser = async (req,res) => {
     });
 }
 
-/*exports.create = (req, res) => {
+exports.create = (req, res) => {
     const userDocument = new User({
     });
     userDocument
@@ -27,13 +27,13 @@ exports.showUser = async (req,res) => {
         .catch(err => {
             res.status(500).json({ error: err });
         });
-}*/
+}
 
-async create(req, res){
+/*async create(req, res){
     const createdUser = await User.create(req.body);
     
     return res.status(200).json(createdUser);
-}
+}*/
 
 exports.update = async (req, res) => {
     const filter = { _id: new ObjectId(req.body.id) };
