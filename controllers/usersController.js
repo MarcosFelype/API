@@ -44,12 +44,12 @@ exports.create = (req, res) => {
 }*/
 
 exports.update = async (req, res) => {
-    const filter = { _id: new ObjectId(req.body.userId) };
+    const filter = { _id: new ObjectId(req.params.userId) };
     console.log(filter);
     //Dados a serem atualizados (ex: nome, cidade...) 
     //padrão:  req.body.nome_atributo
     const update = {
-        nome: req.params.nome,
+        name: req.params.name,
         email: req.params.email,
         password: req.params.password,
         age: req.params.age,
