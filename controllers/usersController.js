@@ -8,7 +8,6 @@ exports.list = async (req, res) => {
 }
 
 exports.showUser = async (req,res) => {
-    //Ver se dá certo
     const id = { _id: new ObjectId(req.params.usersId) };
     console.log(req.params.usersId);
     await User.findById(id._id).exec(function(err, docs){
@@ -27,7 +26,6 @@ exports.create = (req, res) => {
         preferenceArea: req.body.preferenceArea
     });
     userDocument
-    userDocument
         .save()
         .then(result => {
             res.status(201).json({ msg: 'Usuário cadastrado com sucesso.'});
@@ -44,22 +42,23 @@ exports.create = (req, res) => {
 }*/
 
 exports.update = async (req, res) => {
-    const filter = { _id: new ObjectId(req.params.userId) };
-    console.log(filter);
+    const filter = { _id: new ObjectId(req.params.usersId) };
+    console.log(filter._id);
     //Dados a serem atualizados (ex: nome, cidade...) 
     //padrão:  req.body.nome_atributo
     const update = {
-        name: req.params.name,
-        email: req.params.email,
-        password: req.params.password,
-        age: req.params.age,
-        country: req.params.country,
-        office: req.params.office,
-        preferenceArea: req.params.preferenceArea
+        name: req.body.name,
+        email: req.body.email,
+        password: req.body.password,
+        age: req.body.age,
+        country: req.body.country,
+        office: req.body.office,
+        preferenceArea: req.body.preferenceArea
     };
+    console.log(req.params);
     console.log(update);
     await User
-    .findOneAndUpdate(filter, update)
+    .findOneAndUpdate(filter._id, update)
     .then(function (err, result) {
         //console.log(req.body.nome);
         msg = "Usuário atualizado com sucesso!";

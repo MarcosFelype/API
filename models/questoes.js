@@ -44,4 +44,4 @@ const QuestoesSchema = new mongoose.Schema({
     },
 })
 
-module.exports = mongoose.model("questoes", QuestoesSchema, "questoes");
+module.exports = mongoose.model("quesTest", QuestoesSchema, "quesTest");

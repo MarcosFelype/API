@@ -12,7 +12,7 @@ var questoes =
             alternativa3:'2',
             alternativa4:'5',
             alternativa5:'6',
-            alternativa_certa:1,
+            alternativaCerta:1,
             assunto:'Planetas',
             nivel:1
         },
@@ -25,7 +25,7 @@ var questoes =
             alternativa3:'A rotação da Terra.',
             alternativa4:'À noite o Sol não brilha',
             alternativa5:'À noite um Buraco Negro bloqueia a luz do Sol.',
-            alternativa_certa:3,
+            alternativaCerta:3,
             assunto:'Movimento dos astros',
             nivel:2
         },
@@ -38,7 +38,7 @@ var questoes =
             alternativa3:'Marte',
             alternativa4:'Vênus',
             alternativa5:'Lua',
-            alternativa_certa:5,
+            alternativaCerta:5,
             assunto:'Tópicos de astronáutica',
             nivel:2
         }
