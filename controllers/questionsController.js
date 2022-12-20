@@ -7,17 +7,7 @@ const app = express();
 
 
 
-/*imagem: "oi",
-titulo: "b",
-alternativa1: "1",
-alternativa2: "2",
-alternativa3: "4",
-alternativa4: "5",
-alternativa5: "10",
-alternativaCerta: 3,
-assunto: "Astronomia",
-nivel: 3 */
-    var i=0;
+    /*var i=0;
     function insertQuestions(req, res){
     //router.post("/create", (req, res) => {
         //var questionsDocument = new Questoes();
@@ -52,7 +42,7 @@ nivel: 3 */
                 //});  
                 
             }while(i!=3);
-            }
+            }*/
 
 exports.list = async (req, res) => {
     await Questoes.find({}).exec(function(err, docs) {
